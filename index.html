@@ -24,6 +24,41 @@
     <title>My GitHub Website</title>
     
     <style>
+       #tiny-banner {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+#tiny-banner img {
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+#tiny-banner button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+#tiny-banner button:hover {
+    background: darkred;
+}
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
