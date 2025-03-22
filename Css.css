@@ -1,118 +1,27 @@
-.shopify-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(135deg, #00c3ff, #ff6f00);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-    max-width: 650px;
-    margin: 20px auto;
-    text-decoration: none;
-    color: white;
+/* Reset default margin, padding, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.shopify-banner:hover {
-    transform: scale(1.05);
-}
-
-.banner-content {
-    max-width: 65%;
-}
-
-.shopify-banner h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
-
-.shopify-banner p {
-    font-size: 16px;
-    margin: 0 0 15px;
-}
-
-.shopify-banner button {
-    background: #ffffff;
-    color: #ff6f00;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.shopify-banner button:hover {
-    background: #ff6f00;
-    color: #fff;
-}
-
-.shopify-banner img {
-    width: 140px;
-    height: auto;
-    border-radius: 10px;
-}
-/* Fix overlapping and layout issues */
+/* Main Page Container */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; /* Adds spacing between elements */
+    gap: 20px; /* Space between sections */
+    max-width: 90%;
+    margin: 40px auto; /* Center the content */
 }
 
 /* Product Banner Styling */
 .product-banner {
     flex: 1;
-    max-width: 400px;
-    background: linear-gradient(135deg, #0072ff, #ff9500);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-/* Video Section Styling */
-.video-section {
-    flex: 1;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Make it responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-banner,
-    .video-section {
-        max-width: 100%;
-    }
-}
-/* Ensure proper layout */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px; /* Adds spacing */
-    max-width: 90%;
-    margin: auto;
-}
-
-/* Product Banner */
-.product-banner {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 320px;
+    max-width: 450px;
     background: linear-gradient(135deg, #0072ff, #ff9500);
     padding: 20px;
     border-radius: 15px;
@@ -121,27 +30,74 @@
     text-align: center;
 }
 
-/* Button Styling */
+/* Product Banner Heading */
+.product-banner h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Product Description */
+.product-banner p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Product Image */
+.product-banner img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Buy Now Button */
 .buy-now {
     display: inline-block;
     background: orange;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 18px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.buy-now:hover {
+    background: #ff7300;
 }
 
 /* Video Section */
 .video-section {
     flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 320px;
+    max-width: 450px;
     background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+/* Video Heading */
+.video-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Embedded Video */
+.video-section iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Video Description */
+.video-section p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 /* Responsive Design */
