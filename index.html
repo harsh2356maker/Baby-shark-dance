@@ -26,38 +26,78 @@
     <style>
        #tiny-banner {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(255, 215, 0, 0.9);
-    padding: 5px 10px;
-    border-radius: 5px;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 223, 88, 0.95); /* Soft gold background */
+    padding: 8px 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
     font-family: Arial, sans-serif;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#tiny-banner:hover {
+    transform: scale(1.05);
 }
 
 #tiny-banner img {
-    margin-right: 5px;
-    border-radius: 3px;
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tiny-banner span {
+    font-weight: bold;
+    color: #333;
+    margin-right: 8px;
 }
 
 #tiny-banner button {
-    background: red;
+    background: #ff4500;
     color: white;
     border: none;
-    padding: 2px 5px;
-    margin-left: 5px;
+    padding: 5px 10px;
     cursor: pointer;
-    font-size: 12px;
-    border-radius: 3px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 #tiny-banner button:hover {
-    background: darkred;
+    background: #c72e00;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #tiny-banner {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #tiny-banner img {
+        width: 40px;
+        margin-right: 5px;
+    }
+
+    #tiny-banner span {
+        display: none; /* Hide text on very small screens */
+    }
+
+    #tiny-banner button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
 
         body {
             font-family: Arial, sans-serif;
