@@ -1,0 +1,57 @@
+.shopify-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #00c3ff, #ff6f00);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    max-width: 650px;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+}
+
+.shopify-banner:hover {
+    transform: scale(1.05);
+}
+
+.banner-content {
+    max-width: 65%;
+}
+
+.shopify-banner h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.shopify-banner p {
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+.shopify-banner button {
+    background: #ffffff;
+    color: #ff6f00;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.shopify-banner button:hover {
+    background: #ff6f00;
+    color: #fff;
+}
+
+.shopify-banner img {
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+}
