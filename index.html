@@ -24,103 +24,61 @@
     <title>My GitHub Website</title>
     
     <style>
-       #tiny-banner {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 223, 88, 0.95); /* Gold background */
-    padding: 12px 16px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    max-width: 320px;
-}
+     
 
-#tiny-banner:hover {
-    transform: scale(1.07);
+#tiny-banner {
+
+    position: fixed;
+
+    bottom: 10px;
+
+    right: 10px;
+
+    background: rgba(255, 215, 0, 0.9);
+
+    padding: 10px 10px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    font-family: Arial, sans-serif;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    z-index: 999;
+
 }
 
 #tiny-banner img {
-    width: 70px;
-    height: auto;
-    margin-right: 12px;
-    border-radius: 6px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
 
-#tiny-banner span {
-    font-weight: bold;
-    color: #333;
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-right: 7px;
+
+    border-radius: 7px;
+
 }
 
 #tiny-banner button {
-    background: #ff4500;
+
+    background: red;
+
     color: white;
+
     border: none;
-    padding: 6px 12px;
+
+    padding: 4px 10px;
+
+    margin-left: 5px;
+
     cursor: pointer;
-    font-size: 14px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
 
-#tiny-banner button:hover {
-    background: #c72e00;
-}
+    font-size: 12px;
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #tiny-banner {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px;
-        font-size: 14px;
-        max-width: 280px;
-    }
-
-    #tiny-banner img {
-        width: 60px;
-        margin-right: 8px;
-    }
-
-    #tiny-banner button {
-        padding: 5px 10px;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    #tiny-banner {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px;
-        max-width: 240px;
-    }
-
-    #tiny-banner img {
-        width: 50px;
-        margin-right: 6px;
-    }
-
-    #tiny-banner span {
-        display: none; /* Hide text on very small screens */
-    }
-
-    #tiny-banner button {
-        padding: 5px 8px;
-        font-size: 12px;
-    }
-}
+    border-radius: 3px;
 
 
         body {
