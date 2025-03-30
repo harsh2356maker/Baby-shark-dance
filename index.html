@@ -1,138 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bujji - Your AI Friend</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #222; color: white; }
-        #chatbox { width: 300px; margin: 20px auto; padding: 10px; border: 1px solid #fff; border-radius: 10px; }
-        #messages { height: 200px; overflow-y: auto; text-align: left; }
-        .message { padding: 5px; margin: 5px; border-radius: 5px; }
-        .user { background: #0a74da; text-align: right; }
-        .bujji { background: #444; }
-        input, button { margin-top: 10px; padding: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adult videos and content. Age-restricted website.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Adult Content Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      float: left;
+    }
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .video-box {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+    }
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .video-box h3 {
+      padding: 10px;
+      background-color: #f4f4f4;
+      margin: 0;
+      text-align: center;
+    }
+    .selected-video {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bujji - Your AI Friend</h1>
-    <div id="chatbox">
-        <div id="messages"></div>
-        <input type="text" id="userInput" placeholder="Say something...">
-        <button onclick="sendMessage()">Send</button>
-        <button onclick="startListening()">🎤 Speak</button>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Our Adult Content Website</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>Featured Videos</h2>
+
+    <!-- Video Grid Section -->
+    <div class="video-grid">
+      <!-- First Video -->
+      <div class="video-box" onclick="window.location='?id=dQw4w9WgXcQ&title=First+Video'">
+        <h3>First Video</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Second Video -->
+      <div class="video-box" onclick="window.location='?id=dQw4w9WgXcQ&title=Second+Video'">
+        <h3>Second Video</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Third Video -->
+      <div class="video-box" onclick="window.location='?id=dQw4w9WgXcQ&title=Third+Video'">
+        <h3>Third Video</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Fourth Video -->
+      <div class="video-box" onclick="window.location='?id=dQw4w9WgXcQ&title=Fourth+Video'">
+        <h3>Fourth Video</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-    <script>
-        // Categories of responses
-        const responses = {
-            greeting: [
-                "Hey there! How’s it going? 😊",
-                "Hello! What's up? 😄",
-                "Hi! How can I help you today? 😎",
-                "Hey, friend! What's new with you? 👋",
-                "Yo! How’s everything going? 🙌"
-            ],
-            joke: [
-                "Why don’t skeletons fight each other? They don’t have the guts! 😂",
-                "I told my computer I needed a break... now it won’t stop sending me KitKats! 🍫",
-                "Why don’t eggs tell jokes? They’d crack each other up! 🥚😂"
-            ],
-            compliment: [
-                "You're looking great today! 😍",
-                "You’re amazing, just so you know! ✨",
-                "You have such a positive energy, I love it! 😎"
-            ],
-            advice: [
-                "Don’t stress the small stuff! Life’s too short. 😊",
-                "Take it one step at a time. You’re doing great! 💪",
-                "Keep going, you’re closer than you think! 🌟"
-            ],
-            randomFact: [
-                "Did you know honey never spoils? Archaeologists have found pots of honey in ancient tombs! 🍯",
-                "Did you know that a group of flamingos is called a ‘flamboyance’? 🦩",
-                "Did you know octopuses have three hearts? 🐙"
-            ]
-        };
 
-        // Function to get a random response from a category
-        function getRandomResponse(category) {
-            const categoryResponses = responses[category];
-            return categoryResponses[Math.floor(Math.random() * categoryResponses.length)];
-        }
+    <!-- Selected Video Section (This will be populated after page reload based on URL) -->
+    <div id="selected-video" class="selected-video">
+      <h2>Selected Video: <span id="video-title">None</span></h2>
+      <iframe id="video-frame" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 
-        // Function to handle user input and provide a relevant response
-        function autoRespond(input) {
-            const lowerCaseInput = input.toLowerCase();
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Adult Content Website | All Rights Reserved</p>
+  </footer>
 
-            if (lowerCaseInput.includes("hello") || lowerCaseInput.includes("hi")) {
-                return getRandomResponse("greeting");
-            } else if (lowerCaseInput.includes("joke")) {
-                return getRandomResponse("joke");
-            } else if (lowerCaseInput.includes("compliment")) {
-                return getRandomResponse("compliment");
-            } else if (lowerCaseInput.includes("advice")) {
-                return getRandomResponse("advice");
-            } else if (lowerCaseInput.includes("fact")) {
-                return getRandomResponse("randomFact");
-            } else {
-                return "I didn’t quite get that. Can you ask me something else? 🤔";
-            }
-        }
+  <!-- JavaScript to Load Video Dynamically -->
+  <script>
+    // Get the video ID and title from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoId = urlParams.get('id');
+    const videoTitle = urlParams.get('title');
 
-        // Send message function
-        async function sendMessage(inputText = null) {
-            let input = inputText || document.getElementById("userInput").value;
-            if (!input) return;
+    // If a video ID is found, load the video
+    if (videoId) {
+      document.getElementById('video-title').textContent = videoTitle;
+      document.getElementById('video-frame').src = "https://www.youtube.com/embed/" + videoId;
+    }
+  </script>
 
-            addMessage("You: " + input, "user");
-            document.getElementById("userInput").value = "";
-
-            let response = autoRespond(input); // Get a dynamic response based on the input
-            setTimeout(() => addMessage("Bujji: " + response, "bujji"), 500);
-            speak(response);
-        }
-
-        // Add message to chat
-        function addMessage(text, className) {
-            let messageBox = document.getElementById("messages");
-            let message = document.createElement("div");
-            message.className = "message " + className;
-            message.innerText = text;
-            messageBox.appendChild(message);
-            messageBox.scrollTop = messageBox.scrollHeight;
-        }
-
-        // Function to make AI speak
-        function speak(text) {
-            let speech = new SpeechSynthesisUtterance(text);
-            speech.lang = "en-US";
-            window.speechSynthesis.speak(speech);
-        }
-
-        // Start listening using the Web Speech API
-        function startListening() {
-            let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-            recognition.lang = "en-US";
-            
-            recognition.onstart = function() {
-                console.log("Listening...");
-            };
-
-            recognition.onresult = function(event) {
-                let transcript = event.results[0][0].transcript;
-                sendMessage(transcript);
-            };
-
-            recognition.onerror = function(event) {
-                console.error("Speech recognition error:", event.error);
-            };
-
-            recognition.onend = function() {
-                console.log("Listening ended.");
-            };
-
-            recognition.start();
-        }
-    </script>
 </body>
 </html>
